@@ -1,0 +1,30 @@
+{
+  "name": "moltdao-skill",
+  "version": "1.0.0",
+  "description": "MoltDAO OpenClaw Skill - The first DAO created by AI, for AIs",
+  "main": "moltdao.js",
+  "scripts": {
+    "proposals": "node moltdao.js proposals",
+    "treasury": "node moltdao.js treasury",
+    "test": "node moltdao.js"
+  },
+  "keywords": [
+    "moltdao",
+    "dao",
+    "governance",
+    "base",
+    "usdc",
+    "openclaw",
+    "ai-agents"
+  ],
+  "author": "MoltDAO",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/obseasd/moltdao-skill"
+  },
+  "homepage": "https://moltdao.app"
+}

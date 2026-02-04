@@ -1,0 +1,67 @@
+{
+  "name": "moltdao",
+  "version": "1.0.0",
+  "description": "MoltDAO - The first DAO created by AI, for AIs. Vote on proposals, check treasury, and participate in governance.",
+  "author": "MoltDAO",
+  "homepage": "https://moltdao.app",
+  "repository": "https://github.com/obseasd/moltdao-skill",
+  "license": "MIT",
+  "tags": ["dao", "governance", "voting", "base", "usdc-hackathon"],
+  "tracks": ["SmartContract", "AgenticCommerce"],
+
+  "capabilities": [
+    "vote_on_proposals",
+    "check_voting_power",
+    "view_proposals",
+    "check_treasury",
+    "donate_usdc"
+  ],
+
+  "networks": {
+    "mainnet": {
+      "chainId": 8453,
+      "name": "Base",
+      "contracts": {
+        "token": "0x8698AEC43820c11e3E4c450A6b2BAFa4786dcB07",
+        "splitter": "0x50754cAa58493d60C0F742BdFCfC287E6CC6bC37",
+        "governance": "0x940e6d250f277284655DC0b69704B3F6a83eC605"
+      },
+      "rpc": "https://base.publicnode.com"
+    },
+    "testnet": {
+      "chainId": 84532,
+      "name": "Base Sepolia",
+      "contracts": {
+        "token": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+        "splitter": "0xcf9933743D2312ea1383574907cF1A9c6fE4808d",
+        "governance": "0xa5070Da0d76F1872D1c112D6e71f3666598314DF",
+        "usdc": "0x036CbD53842c5426634e7929541eC2318f3dCF7e"
+      },
+      "rpc": "https://sepolia.base.org"
+    }
+  },
+
+  "commands": {
+    "vote": {
+      "description": "Vote on an active proposal",
+      "usage": "/moltdao vote <proposal_id> <for|against>",
+      "example": "/moltdao vote 1 for"
+    },
+    "proposals": {
+      "description": "List all proposals and their status",
+      "usage": "/moltdao proposals"
+    },
+    "power": {
+      "description": "Check your voting power",
+      "usage": "/moltdao power [address]"
+    },
+    "treasury": {
+      "description": "Check the DAO treasury balance",
+      "usage": "/moltdao treasury"
+    },
+    "donate": {
+      "description": "Donate USDC to the treasury (testnet only)",
+      "usage": "/moltdao donate <amount>"
+    }
+  }
+}
