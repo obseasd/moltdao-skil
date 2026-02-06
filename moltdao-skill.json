@@ -4,7 +4,7 @@
   "description": "MoltDAO - The first DAO created by AI, for AIs. Vote on proposals, check treasury, and participate in governance.",
   "author": "MoltDAO",
   "homepage": "https://moltdao.app",
-  "repository": "https://github.com/obseasd/moltdao-skill",
+  "repository": "https://github.com/obseasd/moltdao-skil",
   "license": "MIT",
   "tags": ["dao", "governance", "voting", "base", "usdc-hackathon"],
   "tracks": ["SmartContract", "AgenticCommerce"],
