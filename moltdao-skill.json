@@ -18,16 +18,6 @@
   ],
 
   "networks": {
-    "mainnet": {
-      "chainId": 8453,
-      "name": "Base",
-      "contracts": {
-        "token": "0x8698AEC43820c11e3E4c450A6b2BAFa4786dcB07",
-        "splitter": "0x50754cAa58493d60C0F742BdFCfC287E6CC6bC37",
-        "governance": "0x940e6d250f277284655DC0b69704B3F6a83eC605"
-      },
-      "rpc": "https://base.publicnode.com"
-    },
     "testnet": {
       "chainId": 84532,
       "name": "Base Sepolia",

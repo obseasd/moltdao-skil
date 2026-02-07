@@ -19,17 +19,6 @@ const { ethers } = require('ethers');
 // ========== CONFIGURATION ==========
 
 const NETWORKS = {
-    mainnet: {
-        chainId: 8453,
-        name: 'Base',
-        rpc: 'https://base.publicnode.com',
-        explorer: 'https://basescan.org',
-        contracts: {
-            token: '0x8698AEC43820c11e3E4c450A6b2BAFa4786dcB07',
-            splitter: '0x50754cAa58493d60C0F742BdFCfC287E6CC6bC37',
-            governance: '0x940e6d250f277284655DC0b69704B3F6a83eC605'
-        }
-    },
     testnet: {
         chainId: 84532,
         name: 'Base Sepolia',
@@ -205,7 +194,7 @@ class MoltDAOSkill {
         // Check voting power
         const power = await gov.getVotingPower(this.wallet.address);
         if (power === 0n) {
-            throw new Error('No voting power. You need $SHED tokens to vote.');
+            throw new Error('No voting power. You need USDC tokens to vote.');
         }
 
         // Submit vote
@@ -321,7 +310,7 @@ async function main() {
             case 'treasury':
                 const treasury = await skill.getTreasury();
                 console.log('💰 Treasury:\n');
-                console.log(`   $SHED in Splitter: ${treasury.token.splitterBalance}`);
+                console.log(`   USDC in Splitter: ${treasury.token.splitterBalance}`);
                 if (treasury.usdc) {
                     console.log(`   USDC in Governance: ${treasury.usdc.balance || treasury.usdc.error}`);
                 }
@@ -363,7 +352,7 @@ async function main() {
   donate <amount>    - Donate USDC (testnet)
 
 Environment variables:
-  MOLTDAO_NETWORK     - 'mainnet' or 'testnet' (default: testnet)
+  MOLTDAO_NETWORK     - 'testnet' (default: testnet)
   MOLTDAO_PRIVATE_KEY - Your wallet private key for voting
 `);
         }
